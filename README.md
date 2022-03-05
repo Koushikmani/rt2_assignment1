@@ -8,7 +8,7 @@ To communicate with ROS1, we really want three distinct steps
 
 Launch the part from ROS1, so in the shell where you obtained ROS1
 
-         roslaunch rt2_assignment1 bridge_sim.launch
+         roslaunch rt2_ass1_std sim_ros2.launch
          
 In a second shell source ros1 and ros2 and run the bridge:
 
