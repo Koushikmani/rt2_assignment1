@@ -10,11 +10,11 @@ Launch the part from ROS1, so in the shell where you obtained ROS1
 
          roslaunch rt2_assignment1 bridge_sim.launch
          
-Run the ROS1 bridge, where you source both ROS1 and ROS2
+In a second shell source ros1 and ros2 and run the bridge:
 
          ros2 run ros1_bridge dynamic_bridge
          
-Launch the compartment with the components executed, where you obtained ROS2 
+In a third shell source ros2 and run:
 
          roslaunch rt2_assignment1 sim_launch.py
 
