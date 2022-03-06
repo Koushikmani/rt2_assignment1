@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Package<sp/>explanation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>package<sp/>manages<sp/>the<sp/>mobile<sp/>non-holonomic<sp/>robot<sp/>with<sp/>a<sp/>simple<sp/>&apos;go_to_point&apos;<sp/>behaviour:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*An<sp/>irregular<sp/>objective<sp/>is<sp/>given<sp/>(a<sp/>posture,<sp/>[x,y,theta])</highlight></codeline>
+<codeline><highlight class="normal">*The<sp/>robot<sp/>situates<sp/>itself<sp/>towards<sp/>the<sp/>[x,y]<sp/>destination</highlight></codeline>
+<codeline><highlight class="normal">*Then,<sp/>at<sp/>that<sp/>point,<sp/>drives<sp/>directly<sp/>to<sp/>that<sp/>position<sp/>(changing<sp/>the<sp/>direction<sp/>assuming<sp/>need);</highlight></codeline>
+<codeline><highlight class="normal">*Having<sp/>reached<sp/>the<sp/>[x,y]<sp/>objective<sp/>position<sp/>the<sp/>robot<sp/>turns<sp/>set<sp/>up<sp/>to<sp/>match<sp/>the<sp/>objective<sp/>theta;</highlight></codeline>
+<codeline><highlight class="normal">*In<sp/>the<sp/>event<sp/>that<sp/>the<sp/>client<sp/>doesn&apos;t<sp/>stop<sp/>the<sp/>robot<sp/>GOTO<sp/>stage<sp/>1,<sp/>in<sp/>any<sp/>case<sp/>stay<sp/>still<sp/>until<sp/>requested<sp/>to<sp/>begin<sp/>once<sp/>more,<sp/>then,<sp/>at<sp/>that<sp/>point,<sp/>GOTO<sp/>stage<sp/>1;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Since<sp/>the<sp/>client<sp/>demand<sp/>is<sp/>here<sp/>carried<sp/>out<sp/>as<sp/>an<sp/>action<sp/>it<sp/>tends<sp/>to<sp/>be<sp/>acquired,<sp/>stoppinng<sp/>the<sp/>robot<sp/>whenever<sp/>and<sp/>afterward<sp/>restarting<sp/>it<sp/>while<sp/>giving<sp/>another<sp/>objective.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Content<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Two<sp/>nodes<sp/>are<sp/>carried<sp/>out<sp/>as<sp/>python<sp/>scripts</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">go_to_point.py:<sp/>the<sp/>action<sp/>server<sp/>dealing<sp/>with<sp/>the<sp/>robot<sp/>speed<sp/>control<sp/>contingent<sp/>upon<sp/>the<sp/>objective<sp/>goal.</highlight></codeline>
+<codeline><highlight class="normal">user_interface.py:<sp/>the<sp/>simple<sp/>command<sp/>line<sp/>UI,<sp/>which<sp/>sends<sp/>the<sp/>request<sp/>to<sp/>begin/stop<sp/>the<sp/>go_to_point<sp/>behaviour.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">While<sp/>the<sp/>last<sp/>two<sp/>are<sp/>C++<sp/>based<sp/>nodes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">position_service.cpp:<sp/>the<sp/>server<sp/>creating<sp/>an<sp/>arbitrary<sp/>posture<sp/>[x,y,theta]<sp/>as<sp/>a<sp/>reaction<sp/>to<sp/>a<sp/>request.</highlight></codeline>
+<codeline><highlight class="normal">state_machine.cpp:<sp/>the<sp/>FSM<sp/>dealing<sp/>with<sp/>the<sp/>request<sp/>of<sp/>another<sp/>objective<sp/>posture<sp/>while<sp/>required,<sp/>sending<sp/>it<sp/>as<sp/>an<sp/>objective<sp/>to<sp/>&apos;go_to_point&apos;<sp/>action<sp/>server.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">At<sp/>last,<sp/>the<sp/>control<sp/>can<sp/>be<sp/>applied<sp/>to<sp/>a<sp/>robot<sp/>recreated<sp/>utilizing<sp/>Coppeliasim<sp/>(see<sp/>Requirements),<sp/>for<sp/>which<sp/>two<sp/>scenes<sp/>are<sp/>here<sp/>introduced</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pioneer_scene.ttt:<sp/>a<sp/>basic<sp/>scene<sp/>with<sp/>a<sp/>Pioneer<sp/>p3dx<sp/>non-holonomic<sp/>versatile<sp/>robot<sp/>in<sp/>a<sp/>vacant<sp/>environment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">robotnik_scene.ttt:<sp/>a<sp/>simple<sp/>scene<sp/>scene<sp/>with<sp/>a<sp/>Robotnik<sp/>Summit<sp/>XL140701<sp/>non-holonomic<sp/>mobile<sp/>robot<sp/>in<sp/>a<sp/>vacant<sp/>environment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>To<sp/>Run<sp/>and<sp/>compile</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Compilation<sp/>can<sp/>be<sp/>done<sp/>as<sp/>always<sp/>with</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path/to/ros_ws/$<sp/>catkin_make</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Two<sp/>launch<sp/>files<sp/>are<sp/>given</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sim.launch:<sp/>to<sp/>be<sp/>utilized<sp/>in<sp/>order<sp/>to<sp/>launch<sp/>all<sp/>the<sp/>nodes<sp/>and<sp/>the<sp/>Gazebo<sp/>simulation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path/to/ros_ws/$<sp/>roslaunch<sp/>rt2_assignment1<sp/>sim.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>this<sp/>situation<sp/>the<sp/>Gazebo<sp/>recreation<sp/>will<sp/>naturally<sp/>begin.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sim_coppelia.launch:<sp/>to<sp/>be<sp/>utilized<sp/>in<sp/>order<sp/>to<sp/>all<sp/>the<sp/>nodes<sp/>which<sp/>will<sp/>gives<sp/>with<sp/>the<sp/>Coppelia<sp/>simulation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path/to/ros_ws/$<sp/>roslaunch<sp/>rt2_assignment1<sp/>sim_coppelia.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>this<sp/>situation<sp/>CoppeliaSim<sp/>should<sp/>be<sp/>begun<sp/>independently<sp/>(make<sp/>sure<sp/>to<sp/>have<sp/>a<sp/>case<sp/>of<sp/>roscore<sp/>running<sp/>prior<sp/>to<sp/>sending<sp/>off<sp/>the<sp/>CoppeliaSim<sp/>executable).<sp/>The<sp/>reproduction<sp/>can<sp/>be<sp/>either<sp/>begun<sp/>previously<sp/>or<sp/>subsequent<sp/>to<sp/>sending<sp/>off<sp/>then<sp/>nodes,<sp/>yet<sp/>don&apos;t<sp/>attempt<sp/>to<sp/>run<sp/>another<sp/>recreation<sp/>when<sp/>the<sp/>hubs<sp/>have<sp/>been<sp/>running<sp/>on<sp/>a<sp/>past<sp/>one<sp/>(or<sp/>the<sp/>framework<sp/>could<sp/>wind<sp/>up<sp/>in<sp/>an<sp/>underlying<sp/>state<sp/>differente<sp/>from<sp/>the<sp/>expected<sp/>to<sp/>be<sp/>one,<sp/>always<sp/>being<sp/>unable<sp/>to<sp/>arrive<sp/>at<sp/>the<sp/>goal).In<sp/>different<sp/>terms,<sp/>each<sp/>time<sp/><sp/>simulation<sp/>is<sp/>restarted<sp/>the<sp/>nodes<sp/>should<sp/>be<sp/>to,<sp/>and<sp/>vice-versa<sp/>(generally).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Notebook</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>Jupyter<sp/>Notebook<sp/>can<sp/>be<sp/>found<sp/>under<sp/>the<sp/>notebooks<sp/>folder.<sp/>By<sp/>executing<sp/>it<sp/>the<sp/>robot<sp/>can<sp/>be<sp/>controlled<sp/>with<sp/>a<sp/>graphical<sp/>UI<sp/>giving<sp/>additionally<sp/>ongoing<sp/>charts<sp/>of<sp/>the<sp/>robot<sp/>conduct.<sp/>More<sp/>subtleties<sp/>in<sp/>the<sp/>actual<sp/>journal.<sp/>To<sp/>begin<sp/>the<sp/>journal<sp/>execute</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path/to/ros_ws/src/rt2_assignment1/notebooks$<sp/>jupyter<sp/>notebook<sp/>--allow-root<sp/>--ip<sp/>0.0.0.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Then<sp/>open<sp/>web<sp/>browser<sp/>at<sp/>localhost:8888<sp/>and<sp/>select<sp/>the<sp/>notebook<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Execution<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>StateMachine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>decision<sp/>worth<sp/>of<sp/>note<sp/>likely<sp/>respects<sp/>the<sp/>way<sp/>that<sp/>the<sp/>current<sp/>robot<sp/>state<sp/>can<sp/>be<sp/>changed<sp/>by<sp/>either<sp/>the<sp/>client&apos;s<sp/>feedback<sp/>(1:<sp/>begin,<sp/>-<sp/>1:<sp/>stop)<sp/>or<sp/>the<sp/>action<sp/>arriving<sp/>at<sp/>its<sp/>objective<sp/>goal<sp/>(2:<sp/>activity<sp/>finished):<sp/>in<sp/>the<sp/>last<sp/>option<sp/>case<sp/>the<sp/>condition<sp/>of<sp/>the<sp/>objective<sp/>goal<sp/>is<sp/>recovered,<sp/>and<sp/>a<sp/>check<sp/>is<sp/>made<sp/>on<sp/>regardless<sp/>of<sp/>whether<sp/>the<sp/>activity<sp/>was<sp/>succesful.<sp/>On<sp/>the<sp/>off<sp/>chance<sp/>that<sp/>it<sp/>succeeded,<sp/>it<sp/>begins<sp/>again<sp/>by<sp/>characterizing<sp/>another<sp/>irregular<sp/>objective<sp/>point,<sp/>if<sp/>not<sp/>the<sp/>robot<sp/>will<sp/>pause<sp/>and<sp/>sit<sp/>tight<sp/>for<sp/>new<sp/>client<sp/>inputs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Next<sp/>to<sp/>this<sp/>README<sp/>further<sp/>documentation<sp/>of<sp/>all<sp/>classes<sp/>and<sp/>techniques<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>doc<sp/>organizer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Gazebo<sp/>is<sp/>expected<sp/>to<sp/>run<sp/>the<sp/>first<sp/>launch<sp/>file<sp/>(the<sp/>scene<sp/>definition<sp/>is<sp/>introduced<sp/>in<sp/>this<sp/>package).<sp/>Coppeliasim<sp/>is<sp/>expected<sp/>to<sp/>run<sp/>the<sp/>second<sp/>launch<sp/>file<sp/>http://www.coppeliarobotics.com/downloads.html<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Known<sp/>issues<sp/>and<sp/>limitations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Assuming<sp/>you<sp/>take<sp/>a<sp/>stab<sp/>at<sp/>running<sp/>both<sp/>the<sp/>Gazebo<sp/>and<sp/>CoppeliaSim<sp/>and<sp/>the<sp/>last<sp/>option<sp/>appears<sp/>to<sp/>not<sp/>answer<sp/>to<sp/>the<sp/>hubs,<sp/>while<sp/>the<sp/>UI<sp/>results<sp/>frozen<sp/>subsequent<sp/>to<sp/>having<sp/>advised<sp/>the<sp/>framework<sp/>to<sp/>run,<sp/>attempt<sp/>to<sp/>kill<sp/>the<sp/>roscore<sp/>interaction;<sp/>this<sp/>may<sp/>be<sp/>connected<sp/>with<sp/>Gazebo<sp/>overwriting<sp/>a<sp/>few<sp/>qualities<sp/>connected<sp/>with<sp/>the<sp/>simulation<sp/>(most<sp/>likely<sp/>reproduction<sp/>time)<sp/>and<sp/>these<sp/>not<sp/>being<sp/>properly<sp/>&quot;cleaned&quot;<sp/>whenever<sp/>Gazebo<sp/>is<sp/>shut.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
