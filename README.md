@@ -6,10 +6,10 @@ Koushikmani Maskalmatti Lakshman (S5053566)
 The package manages the mobile non-holonomic robot with a simple 'go_to_point' behaviour:
 
 *An irregular objective is given (a posture, [x,y,theta]) <--  
-/n The robot situates itself towards the [x,y] destination
-/n Then, at that point, drives directly to that position (changing the direction assuming need);
-*Having reached the [x,y] objective position the robot turns set up to match the objective theta;
-*In the event that the client doesn't stop the robot GOTO stage 1, in any case stay still until requested to begin once more, then, at that point, GOTO stage 1;
+*The robot situates itself towards the [x,y] destination<--  
+Then, at that point, drives directly to that position (changing the direction assuming need)<--  
+*Having reached the [x,y] objective position the robot turns set up to match the objective theta<--  
+*In the event that the client doesn't stop the robot GOTO stage 1, in any case stay still until requested to begin once more, then, at that point, GOTO stage <--  
 
 Since the client demand is here carried out as an action it tends to be acquired, stoppinng the robot whenever and afterward restarting it while giving another objective.
 
