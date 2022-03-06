@@ -16,12 +16,12 @@ roslaunch rt2_assignment1 sim.launch
 ```
 ## Description of the branch. 
 In this organizer you can find:
-action: contains the .action file Robotposition.action, needed to modify go_to_point as an action_server.
-launch: having the launch file sim.launch, that starts the simulation in a Gazebo environment.
-scripts: having two nodes implemented as python scripts that set the behaviour of the robot 
-go_to_point: this is the action server that manage the robot speed control, depending on the goal received.
-user_interface: sends the request to start/stop the go_to_point behaviour asking to the user what the robot needs to do. 
-src: contains two nodes implemented as cpp file that set the behaviour of the robot
-position_server: it is the server that generates a random position.
-state_machine: makes the demand of a new goal and it send the request as a goal to go_to_point action server. 
+action: contains the .action file Robotposition.action, needed to modify go_to_point as an action_server <--   
+launch: having the launch file sim.launch, that starts the simulation in a Gazebo environment <--  
+scripts: having two nodes implemented as python scripts that set the behaviour of the robot <--   
+go_to_point: this is the action server that manage the robot speed control, depending on the goal received <--  
+user_interface: sends the request to start/stop the go_to_point behaviour asking to the user what the robot needs to do <--   
+src: contains two nodes implemented as cpp file that set the behaviour of the robot <--  
+position_server: it is the server that generates a random position <--  
+state_machine: makes the demand of a new goal and it send the request as a goal to go_to_point action server <--   
 
