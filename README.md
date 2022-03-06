@@ -1,5 +1,7 @@
+# Research Track -2 Assignment-1
+
 ## Koushikmani Maskalmatti Lakshman (S5053566)
-# Package explanation
+## Package explanation
 
 The package manages the mobile non-holonomic robot with a simple 'go_to_point' behaviour:
 
@@ -11,7 +13,7 @@ The package manages the mobile non-holonomic robot with a simple 'go_to_point' b
 
 Since the client demand is here carried out as an action it tends to be acquired, stoppinng the robot whenever and afterward restarting it while giving another objective.
 
-# Content description
+## Content description
 
 Two nodes are carried out as python scripts
 
@@ -29,7 +31,7 @@ pioneer_scene.ttt: a basic scene with a Pioneer p3dx non-holonomic versatile rob
 
 robotnik_scene.ttt: a simple scene scene with a Robotnik Summit XL140701 non-holonomic mobile robot in a vacant environment.
 
-# To Run and compile
+## To Run and compile
 
 Compilation can be done as always with
 
@@ -49,7 +51,7 @@ sim_coppelia.launch: to be utilized in order to all the nodes which will gives w
 
 For this situation CoppeliaSim should be begun independently (make sure to have a case of roscore running prior to sending off the CoppeliaSim executable). The reproduction can be either begun previously or subsequent to sending off then nodes, yet don't attempt to run another recreation when the hubs have been running on a past one (or the framework could wind up in an underlying state differente from the expected to be one, always being unable to arrive at the goal).In different terms, each time  simulation is restarted the nodes should be to, and vice-versa (generally).
 
-# Notebook
+## Notebook
 
 A Jupyter Notebook can be found under the notebooks folder. By executing it the robot can be controlled with a graphical UI giving additionally ongoing charts of the robot conduct. More subtleties in the actual journal. To begin the journal execute
 
@@ -57,7 +59,7 @@ A Jupyter Notebook can be found under the notebooks folder. By executing it the 
              
 Then open web browser at localhost:8888 and select the notebook           
 
-# Execution description
+## Execution description
 
 ## StateMachine
 
