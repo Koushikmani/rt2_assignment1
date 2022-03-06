@@ -1,6 +1,7 @@
 # RESEARCH TRACK2 - Assignment 1: action server
 
- Koushikmani Maskalmatti Lakshman(S5053566)
+Koushikmani Maskalmatti Lakshman(S5053566)
+
 The aim of this package is to control a non-holonomic mobile robot in a Gazebo environment. The user can choose to make the robot start moving or stop it. When the user gives the command to start moving, a random pose is chosen and the robot start moving. The user has the possibility to stop the robot, even if a random pose has been already chosen. When the user gives the command to stop the robot, the robot immediately stops and waits for another random pose.
 The reason for this package is to control a non-holonomic mobile robot in a Gazebo environment. The client can decide to make the robot begin moving or stop it. Whenever the client provides the order to begin moving, an arbitrary posture is picked and the robot begin moving. The client has the chances to stop the robot, regardless of whether an random posture has been now picked. At the point when the client provides the order to stop the robot, the robot quickly stops and waits for another random posture.
 
