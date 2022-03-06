@@ -13,8 +13,8 @@
 *
 * Description:
 *
-* This node replies to a request for a random
-* pose (x, y, \theta) with a random pose bounded
+* This node gives to a solicitation for an irregular
+* present (x, y, \theta) with an irregular posture limited
 * by the limits passed in the request.
 ********************************************/
 
