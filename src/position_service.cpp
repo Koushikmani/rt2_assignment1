@@ -1,9 +1,54 @@
+/****************************************//**
+* \file position_service.cpp
+* \brief Node responsible for generating 
+*	a random position (x, y, \theta).
+* \author Koushikmani Maskalmatti Lakshman
+* \version 1.0
+* \date 26/02/2022
+*
+* \details
+*
+* ServiceServer:
+*   /position_server (rt2_assignment1::RandomPosition)
+*
+* Description:
+*
+* This node replies to a request for a random
+* pose (x, y, \theta) with a random pose bounded
+* by the limits passed in the request.
+********************************************/
+
 #include "ros/ros.h"
 #include "rt2_assignment1/RandomPosition.h"
+
+/****************************************//**
+* Generate a bounded random number
+*
+* \param M (double):
+*   Lower bound.
+* \param N (double):
+*   Upper bound.
+*
+* \retval randMToN (double):
+*   random number, linearly distributed,
+*   between M and N.
+*
+********************************************/
 
 
 double randMToN(double M, double N)
 {     return M + (rand() / ( RAND_MAX / (N-M) ) ) ; }
+
+/****************************************//**
+* Service callback generating a random
+* (x,y,theta) pose
+*
+* \param req (rt2_assignment1::RandomPosition::Request &):
+*   Service request, containing the (x,y) ranges.
+* \param res (rt2_assignment1::RandomPosition::Response):
+*   Service response, containing (x,y,theta).
+*
+********************************************/
 
 
 bool myrandom (rt2_assignment1::RandomPosition::Request &req, rt2_assignment1::RandomPosition::Response &res){
@@ -13,6 +58,12 @@ bool myrandom (rt2_assignment1::RandomPosition::Request &req, rt2_assignment1::R
     return true;
 }
 
+/****************************************//**
+* Server generating a random position
+*
+* This server is what serves the
+* '/position_server' service.
+********************************************/
 
 int main(int argc, char **argv)
 {
