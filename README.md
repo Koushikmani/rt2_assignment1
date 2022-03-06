@@ -1,4 +1,4 @@
-# First Assignment of the Research Track 2 course (Robotics Engineering / JEMARO, Unige)
+# First Assignment of the Research Track 2 
 
 # Package explanation
 
@@ -64,14 +64,14 @@ Then open web browser at localhost:8888 and select the notebook
 
 The main decision worth of note likely respects the way that the current robot state can be changed by either the client's feedback (1: begin, - 1: stop) or the action arriving at its objective goal (2: activity finished): in the last option case the condition of the objective goal is recovered, and a check is made on regardless of whether the activity was succesful. On the off chance that it succeeded, it begins again by characterizing another irregular objective point, if not the robot will pause and sit tight for new client inputs.
 
+## Prerequisites
+
+Gazebo is expected to run the first launch file (the scene definition is introduced in this package). Coppeliasim is expected to run the second launch file http://www.coppeliarobotics.com/downloads.html
+
 ## Documentation
 
 Next to this README further documentation of all classes and techniques can be found in the doc organizer.
 
-## Requirements
-
-Gazebo is expected to run the first launch file (the scene definition is introduced in this package). Coppeliasim is expected to run the second launch file http://www.coppeliarobotics.com/downloads.html 
-
-## Known issues and limitations
+## Impediments and issues
 
 Assuming you take a stab at running both the Gazebo and CoppeliaSim and the last option appears to not answer to the hubs, while the UI results frozen subsequent to having advised the framework to run, attempt to kill the roscore interaction; this may be connected with Gazebo overwriting a few qualities connected with the simulation (most likely reproduction time) and these not being properly "cleaned" whenever Gazebo is shut.
