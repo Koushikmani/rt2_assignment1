@@ -2,19 +2,19 @@
 * \file position_service.cpp
 * \brief Node responsible for generating 
 *	a random position (x, y, \theta).
-* \author Koushikmani Maskalmatti Lakshman
+* \author Koushikmani Maskalmatti Lakshman (S5053566)
 * \version 1.0
-* \date 26/02/2022
+* \date 06/03/2022
 *
 * \details
 *
 * ServiceServer:
 *   /position_server (rt2_assignment1::RandomPosition)
 *
-* Explanation:
+* Description:
 *
-* This node gives to a solicitation for an irregular
-* present (x, y, \theta) with an irregular posture limited
+* This node replies to a request for a random
+* pose (x, y, \theta) with a random pose bounded
 * by the limits passed in the request.
 ********************************************/
 
@@ -34,8 +34,6 @@
 *   between M and N.
 *
 ********************************************/
-
-
 double randMToN(double M, double N)
 {     return M + (rand() / ( RAND_MAX / (N-M) ) ) ; }
 
@@ -49,8 +47,6 @@ double randMToN(double M, double N)
 *   Service response, containing (x,y,theta).
 *
 ********************************************/
-
-
 bool myrandom (rt2_assignment1::RandomPosition::Request &req, rt2_assignment1::RandomPosition::Response &res){
     res.x = randMToN(req.x_min, req.x_max);
     res.y = randMToN(req.y_min, req.y_max);
@@ -64,7 +60,6 @@ bool myrandom (rt2_assignment1::RandomPosition::Request &req, rt2_assignment1::R
 * This server is what serves the
 * '/position_server' service.
 ********************************************/
-
 int main(int argc, char **argv)
 {
    ros::init(argc, argv, "random_position_server");
