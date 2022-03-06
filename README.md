@@ -1,5 +1,7 @@
 # First Assignment of the Research Track 2 
 
+Koushikmani Maskalmatti Lakshman
+
 # Package explanation
 
 The package manages the mobile non-holonomic robot with a simple 'go_to_point' behaviour:
