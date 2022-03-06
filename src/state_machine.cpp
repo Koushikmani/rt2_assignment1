@@ -1,3 +1,31 @@
+/****************************************//**
+* \file state_machine.cpp
+* \brief Node issuing new goals for the robot
+* \author Koushikmani Maskalmatti Lakshman
+* \version 1.0
+* \date 12/05/2021
+*
+* \details
+*
+* ServiceServer:<BR>
+*   /user_interface (rt2_assignment1::Command)
+*
+* ServiceClient:<BR>
+*   /position_server (rt2_assignment1::RandomPosition)
+*
+* ActionClient:<BR>
+*   /go_to_point (rt2_assignment1::PoseAction)
+*
+* Explanation:
+
+* This node speaks with the action server for
+* go_to_point, giving new objectives goal at whatever point a 'start'
+* demand is gotten from the user_interface.
+* Simultaneously it can stop a running objective
+* if a solicitation for 'prevent' is gotten from the
+* user_interface.
+
+********************************************/
 #include "ros/ros.h"
 #include "rt2_assignment1/Command.h"
 #include "rt2_assignment1/Position.h"
