@@ -60,7 +60,7 @@ Then open web browser at localhost:8888 and select the notebook
 
 # Execution description
 
-## StateMachine
+## Finite StateMachine
 
 The main decision worth of note likely respects the way that the current robot state can be changed by either the client's feedback (1: begin, - 1: stop) or the action arriving at its objective goal (2: activity finished): in the last option case the condition of the objective goal is recovered, and a check is made on regardless of whether the activity was succesful. On the off chance that it succeeded, it begins again by characterizing another irregular objective point, if not the robot will pause and sit tight for new client inputs.
 
