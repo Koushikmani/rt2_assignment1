@@ -11,7 +11,7 @@
 * ServiceServer:
 *   /position_server (rt2_assignment1::RandomPosition)
 *
-* Description:
+* Explanation:
 *
 * This node gives to a solicitation for an irregular
 * present (x, y, \theta) with an irregular posture limited
