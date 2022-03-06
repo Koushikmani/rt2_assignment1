@@ -4,8 +4,8 @@ Koushikmani Maskalmatti Lakshman (S5053566)
 
 ## How are generally the branches structerd:
 
-Main: Code for executing the task of the project/
-doxygen: code for executing the project and documentation of doxygen/
+Main: Code for executing the task of the project/n
+doxygen: code for executing the project and documentation of doxygen/n
 sphinx: code for executing the project and documentation of the sphinx
 
 ## To run the code
