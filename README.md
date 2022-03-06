@@ -1,4 +1,4 @@
-Koushikmani Maskalmatti Lakshman (S5053566)
+## Koushikmani Maskalmatti Lakshman (S5053566)
 # Package explanation
 
 The package manages the mobile non-holonomic robot with a simple 'go_to_point' behaviour:
