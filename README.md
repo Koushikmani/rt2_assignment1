@@ -2,11 +2,6 @@
 
 Koushikmani Maskalmatti Lakshman (S5053566)
 
-## How are generally the branches structerd:
-
-Main: Code for executing the task of the project/n
-doxygen: code for executing the project and documentation of doxygen/n
-sphinx: code for executing the project and documentation of the sphinx
 
 ## To run the code
 
@@ -23,6 +18,11 @@ To open the user_interface:
 
 Open jupyter notebook, or jupyter lab;
 From one of the two programming open "user_notebook_interface.ipynb" situated in the notebook folder
+
+## How are generally the branches structerd:
+
+Main Code for executing the task of the project, doxygen code for executing the project and documentation of doxygen at last sphinx code for executing the project and documentation of the sphinx
+
 
 
 
