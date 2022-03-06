@@ -14,7 +14,8 @@ ActionServer:
     /go_to_point (rt2_assignment1.action.PoseAction)
     called by :mod:`state_machine`
             
-Description:
+Explanation:
+
 This node controls the go_to_point conduct of
 the non-holonomic robot through an action server.
 A FSM is utilized to demonstrate the conduct at whatever point
