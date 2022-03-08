@@ -8,11 +8,11 @@ Koushikmani Maskalmatti Lakshman (S5053566)
 Pick a branch, then
 Assuming that you need the classical gazebo visualization
 
-         roslaunch rt2_ass2 sim.launch
+         roslaunch rt2_assignment1 sim.launch
 
 To see gazebo opened due to, for instance, how much computer processor utilization:
 
-         roslaunch rt2_ass2 sim_small.launch
+         roslaunch rt2_assignment1 sim_small.launch
 
 To open the user_interface:
 
